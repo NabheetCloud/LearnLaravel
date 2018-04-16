@@ -17,8 +17,10 @@ class PostsContoller extends Controller
         //test1211
         //$posts = DB::select('select * from posts');
         //$posts = Post::all();
-        $posts = Post::orderBy('title','desc')->get();
         // return  Post::where('title','Post Two')->get();
+        //$posts = Post::orderBy('title','desc')->take(1)->get();
+        //$posts = Post::orderBy('title','desc')->get();
+        $posts = Post::orderBy('title','desc')->paginate(10);
         return view('posts.index')->with('posts', $posts);
     }
 
