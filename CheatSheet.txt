@@ -1,0 +1,8 @@
+ Create Controller - php artisan make:controller PostsController
+ create controller with resource -  php artisan make:controller PostsContoller --resource
+ routes list - php artisan route:list
+ Migrate mode to databhase - php artisan migrate
+ Make model - php artisan make:model Post -m
+ insert data - php artisan tinker
+ count of data - App\Post::count()
+ create entries -  $post = new App\Post();/$post->title = "Post One";$post->body = "Post Body One";/$post->save()
